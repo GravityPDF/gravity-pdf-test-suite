@@ -20,9 +20,9 @@ $import = static function() {
 		return;
 	}
 
-	/* Import the same sample form 6 times with an entry and create PDF for form #3, #4 and #6 */
+	/* Import the same sample form 5 times with an entry and create PDF for form #3 + #4 */
 	$form = json_decode( file_get_contents( __DIR__ . '/json/sample-form.json' ), true );
-	for ( $i = 1; $i <= 6; $i++ ) {
+	for ( $i = 1; $i <= 5; $i++ ) {
 		$form['title'] = "Sample $i";
 		$form_id       = GFAPI::add_form( $form );
 
@@ -46,33 +46,6 @@ $import = static function() {
 				[
 					'name'     => 'Sample',
 					'template' => 'zadani',
-					'filename' => 'Sample',
-					'font'     => 'dejavusans',
-					'format'   => 'standard',
-					'security' => 'no',
-				]
-			);
-		}
-
-		/* Add 2 PDFs for form 6 */
-		if ( $i === 6 ) {
-			GPDFAPI::add_pdf(
-				$form_id,
-				[
-					'name'     => 'Sample',
-					'template' => 'zadani',
-					'filename' => 'Sample',
-					'font'     => 'dejavusans',
-					'format'   => 'standard',
-					'security' => 'no',
-				]
-			);
-
-			GPDFAPI::add_pdf(
-				$form_id,
-				[
-					'name'     => 'Sample 2',
-					'template' => 'rubix',
 					'filename' => 'Sample',
 					'font'     => 'dejavusans',
 					'format'   => 'standard',
