@@ -47,7 +47,7 @@ $import = static function() {
 					'name'     => 'Sample',
 					'template' => 'zadani',
 					'filename' => 'Sample',
-					'font'     => 'dejavusans',
+					'font'     => 'dejavusanscondensed',
 					'format'   => 'standard',
 					'security' => 'no',
 				]
@@ -62,7 +62,7 @@ $import = static function() {
 					'name'     => 'Sample',
 					'template' => 'zadani',
 					'filename' => 'Sample',
-					'font'     => 'dejavusans',
+					'font'     => 'dejavusanscondensed',
 					'format'   => 'standard',
 					'security' => 'no',
 				]
@@ -74,7 +74,7 @@ $import = static function() {
 					'name'     => 'Sample 2',
 					'template' => 'rubix',
 					'filename' => 'Sample',
-					'font'     => 'dejavusans',
+					'font'     => 'dejavusanscondensed',
 					'format'   => 'standard',
 					'security' => 'no',
 				]

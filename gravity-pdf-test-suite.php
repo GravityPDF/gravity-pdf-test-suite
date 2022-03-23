@@ -23,3 +23,4 @@ include __DIR__ . '/src/register-fake-addon.php';
 include __DIR__ . '/src/mpdf-configuration.php';
 include __DIR__ . '/src/stub-remote-requests.php';
 include __DIR__ . '/src/import-data.php';
+include __DIR__ . '/src/disable-gf-logging-message.php';

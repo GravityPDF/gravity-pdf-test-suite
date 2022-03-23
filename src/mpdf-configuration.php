@@ -17,9 +17,40 @@
  */
 $config = static function( $config ) {
 	return [
-		'mode'    => 'c',
-		'tempDir' => sys_get_temp_dir(),
+		'tempDir'  => sys_get_temp_dir(),
+		'fontDir'  => __DIR__ . '/fonts/',
+		'fontdata' => [
+			"dejavusanscondensed" => [
+				'R'          => "DejaVuSansCondensed.ttf",
+				'useOTL'     => 0xff,
+				'useKashida' => 75,
+			],
+		],
+
+		'backupSubsFont' => [],
+		'backupSIPFont'  => '',
+		'BMPonly'        => [ 'dejavusanscondensed' ],
+
+		'curlCaCertificate'  => ABSPATH . WPINC . '/certificates/ca-bundle.crt',
+		'curlFollowLocation' => true,
+
+		'allow_output_buffering' => true,
+		'autoLangToFont'         => false,
+		'useSubstitutions'       => false,
+		'ignore_invalid_utf8'    => true,
+		'setAutoTopMargin'       => 'stretch',
+		'setAutoBottomMargin'    => 'stretch',
+		'enableImports'          => true,
+		'use_kwt'                => true,
+		'keepColumns'            => true,
+		'biDirectional'          => true,
+		'showWatermarkText'      => true,
+		'showWatermarkImage'     => true,
 	];
 };
 
 add_filter( 'gfpdf_mpdf_class_config', $config );
+
+add_filter( 'gfpdf_font_location', function( $path ) {
+	return __DIR__ . '/fonts/';
+} );
