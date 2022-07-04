@@ -23,7 +23,7 @@ $stub = static function( $return, $req, $url ) {
 		if ( $req['body']['license'] === '123456789' ) {
 			return [
 				'headers'  => [],
-				'body'     => '{"success":false}',
+				'body'     => '{"success":false,"error":"missing"}',
 				'response' => [
 					'code'    => 200,
 					'message' => 'OK',
