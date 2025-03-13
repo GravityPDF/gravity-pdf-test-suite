@@ -85,6 +85,15 @@ $import = static function() {
 	GFSettings::enable_logging();
 	update_option( 'gform_pending_installation', false );
 	delete_option( 'freshinstall' );
+
+	/* Enable API */
+	if ( ! class_exists( 'GFWebAPI' ) ) {
+		return;
+	}
+
+	global $gf_webapi;
+	$gf_webapi = GFWebAPI::get_instance();
+	$gf_webapi->update_plugin_settings( [ 'enabled' => '1', 'version' => 'v2' ] );
 };
 
 add_action( 'init', $import, 1000 );
