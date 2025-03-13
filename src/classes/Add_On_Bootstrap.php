@@ -1,13 +1,11 @@
 <?php
 
-namespace GFPDF;
-
 use GFPDF\Helper\Helper_Abstract_Addon;
 use GFPDF\Helper\Licensing\EDD_SL_Plugin_Updater;
 
 /**
  * @package     Gravity PDF
- * @copyright   Copyright (c) 2022, Blue Liquid Designs
+ * @copyright   Copyright (c) 2025, Blue Liquid Designs
  * @license     http://opensource.org/licenses/gpl-2.0.php GNU Public License
  */
 

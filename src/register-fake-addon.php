@@ -6,7 +6,7 @@ use GFPDF\Helper\Helper_Singleton;
 
 /**
  * @package     Gravity PDF
- * @copyright   Copyright (c) 2022, Blue Liquid Designs
+ * @copyright   Copyright (c) 2025, Blue Liquid Designs
  * @license     http://opensource.org/licenses/gpl-2.0.php GNU Public License
  */
 
@@ -20,12 +20,12 @@ $addon = static function() {
 		return;
 	}
 
-	include __DIR__ . '/Add_On_Bootstrap.php';
+	include __DIR__ . '/classes/Add_On_Bootstrap.php';
 
 	$name = 'Gravity PDF Example Plugin';
 	$slug = 'gravity-pdf-example-plugin';
 
-	$plugin = new GFPDF\Add_On_Bootstrap(
+	$plugin = new \Add_On_Bootstrap(
 		$slug,
 		$name,
 		'Gravity PDF',
