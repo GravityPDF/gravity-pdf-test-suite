@@ -43,4 +43,4 @@ $addon = static function() {
 	$plugin->init();
 };
 
-add_action( 'init', $addon );
+add_action( 'plugins_loaded', $addon );
