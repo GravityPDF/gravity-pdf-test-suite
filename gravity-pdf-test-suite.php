@@ -5,7 +5,7 @@
  * Description:     Imports Gravity Forms test data for automated testing and stubs Gravity PDF functionality for easier testing
  * Author:          Gravity PDF
  * Author URI:      https://gravitypdf.com
- * Version:         0.2
+ * Version:         0.3
  */
 
 /**
